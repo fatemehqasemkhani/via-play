@@ -13,6 +13,9 @@ code {
     monospace;
 }
 
+/* Better to use meaningful class names, all and span not shows which element are you mentioning */
+/* Better to Flex instead of float */
+
 .watched {
 	margin: 0 auto;
 	width: 30%;
