@@ -19,7 +19,7 @@ const Index: React.FC = () => {
         <section>
             <h1>Codest Movies!</h1>
             <MovieForm refresh={() => setRefresh(!refresh)} />
-            <div>
+            <div style={{ display: "flex" }}>
                 <Container title="Watchlist:" children={renderCards(getWatchlist(), "watchList")} />
                 <Container title="Already watched:" children={renderCards(getWatchedMovies(), "watched")} />
             </div>

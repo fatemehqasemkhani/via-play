@@ -1,6 +1,7 @@
 import React from 'react';
 import {allMovies, getWatchedMovies, getWatchlist, watchedMovies} from "../../utils/localStorage";
 import {IMovie} from "../../interfaces/IMovie";
+import {Card} from "./style";
 
 interface ICardProps {
     refresh: () => void,
@@ -27,7 +28,7 @@ const Index: React.FC<ICardProps> = ({ data, type, refresh }) => {
     }
 
     return (
-        <div>
+        <Card>
             <img className="thumbnail" src={image} alt="" />
             <div className="content">
                 <button className="title" onClick={(e) => addToAlreadyWatched(e)}>
@@ -38,7 +39,7 @@ const Index: React.FC<ICardProps> = ({ data, type, refresh }) => {
                 </span>
                 <button className="btn removeBtn" onClick={removeFromList}>Remove</button>
             </div>
-        </div>
+        </Card>
     )
 }
 

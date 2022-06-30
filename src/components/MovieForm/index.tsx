@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import {IMovie} from "../../interfaces/IMovie";
 import { allMovies, getWatchlist } from "../../utils/localStorage";
+import {Form} from "./style";
 
 const initialValues = {
     id: uuidv4(),
@@ -39,7 +40,7 @@ const Index: React.FC<IMovieFormProps> = ({ refresh }) => {
     }
 
     return (
-        <form>
+        <Form>
             <h1>Add movie</h1>
             <div className="container">
                 {renderInputField("title")}
@@ -47,7 +48,7 @@ const Index: React.FC<IMovieFormProps> = ({ refresh }) => {
                 {renderInputField("comment")}
                 <button className="btn submitButton" type="button" onClick={submitForm}>ADD MOVIE</button>
             </div>
-        </form>
+        </Form>
     )
 }
 

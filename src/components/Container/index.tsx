@@ -1,4 +1,5 @@
 import React, {ReactNode} from 'react';
+import { Container } from "./style";
 
 type Props = {
     title: string,
@@ -6,10 +7,10 @@ type Props = {
 }
 
 const Index: React.FC<Props> = ({ title, children }) => (
-    <div>
+    <Container>
         <h1>{title}</h1>
         {children}
-    </div>
+    </Container>
 )
 
 export default Index;
